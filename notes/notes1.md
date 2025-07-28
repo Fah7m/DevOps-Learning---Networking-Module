@@ -33,3 +33,27 @@ operates in the data link layer and facilitates device identification within a l
 
 <img width="1592" height="648" alt="image" src="https://github.com/user-attachments/assets/897467f3-3796-446a-863e-5933818561da" />
 
+**Ports** are logical doors on your device, each door is numbered and each door is used for a specific type of network communications e.g. HTTP goes through port 80 and port 443 for HTTPS.
+
+**Protocols** are basically the rules of the road for data transmission. They define how data is formatted and transmitted across a network (SFTP, FTP, SMTP). These protocols ensure devices can communiate effectively by following the same set of rules.
+- Think of it as languages devices uses to communicate with each other.
+
+The importance of Ports in networking is that they ensure data gets to the right application on your device whilst protocols make sure the data is properly formatted and understandable they are essential for smooth and effecient communication.
+
+<img width="1704" height="777" alt="image" src="https://github.com/user-attachments/assets/4011e05d-655b-4d9e-9928-190d08970805" />
+
+**TCP** The transmission control Protocol is the postman of the networking world. It makes sure that data from one device, reaches it's destination accurately and in the correct order. Before any data is sent, a connection needs to be established for this to accomplish.
+TCP requires a 3 step ***handshake*** process where the two device essentially agree for the transfer of data. Reliable data source
+
+A benefit of TCP is that the order of data being sent being the exact same. Basically meaning that it won't send a a later message first rather it keeps the order the same. Error checking and flow control is another main function of TCP as it checks for errors and control the flow of data to prevent congestion. TCP is used whenever two devices need to exchange data back and forth e.g. web browsing, emailing, file transfers.
+
+<img width="1776" height="818" alt="image" src="https://github.com/user-attachments/assets/f5a1f217-00ba-47ce-84f9-6791adabcb75" />
+
+**UDP** User Datagram Protocol is used to send and receive data. This is much faster than TCP however less reliable, it is straight forward and no prior communication is needed. UDP's function are suitable for real-time applications like gaming and video streaming, in some cases it also used for VPN connections as speed can be more essential that reliability and finally used for DNS lookup.
+
+<img width="1796" height="830" alt="image" src="https://github.com/user-attachments/assets/1bc464b1-0a4a-4ed2-b1d6-0371c2eb4dd8" />
+
+**Both TCP and UDP are layer 4 protocols in the OSI model.**
+
+<img width="1749" height="879" alt="image" src="https://github.com/user-attachments/assets/7b5ea601-2552-4951-95fc-88532971ac8d" />
+
