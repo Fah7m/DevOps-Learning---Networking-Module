@@ -58,9 +58,36 @@ Presentation Layer - The JSON needs to be serialized meaning you're converting y
 
 Session Layer - Where the establishment, maintenance and termination of connections is done - This case we request to establish TCP connection or TLS for secure comms via HTTPS
 
-Transport Layer - Responsible for delivery the data across the network - The device will send a SYN request (TCP handshake= SYN then SYN-ACK
+Transport Layer - Responsible for delivery the data across the network - The device will send a SYN request (TCP handshake= SYN then SYN-ACK then ACK) which happens at port 443 for HTTPS
+
+Network Layer- THe SYN request gets placed into an IP packet which will contain the source and destination IP address so it knows where to go and came from
+
+Data Layer- wraps the packet into a frame and it includes the source and MAC address so that it can travel through local networks to reach the destination.
+
+Physical Layer - Data gets converted into a physical signal, it could bea  radio signal or an electrical rignal if you're using Ethernet. 
+
+The full POV of the sender for this POST request
 
 Receiver
 ---
 <img width="1499" height="878" alt="image" src="https://github.com/user-attachments/assets/8ef6b6e3-6b25-4791-92fe-1bcab1282bff" />
+
+This time we start from Layer 1 up as this is the receiver end
+
+Physical Layer - An incoming signal converted into digital bits - catching the signal and turning it into something the computer understands.
+
+Data Layer - Takes the bits and assembles them into a frame so that it can travel over the local network.
+
+Network Layer - Frame assembled into an IP packet
+
+Transport Layer - The IP packets from layer are assembled into TCP segments
+
+Session Layer - Where the connection is established or identified - we arrive at this layer when neccessary like during the 3 way handshake to confirm the session is valid and secure
+
+Presentation Layer - The data gets prepped for the application layer - Decrypting of data if neccessary and converting it into a form like JSON or something the application can use.
+
+Application Layer - The data reaches its destination and this is where the actual content of your POST request is processed and handled by the service application
+
+The full overview of the POST request from the recieving end through the OSI layers.
+
 
