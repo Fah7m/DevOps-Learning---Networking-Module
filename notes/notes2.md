@@ -33,3 +33,34 @@ MAC addresses, Switches and Bridges
 
 <img width="719" height="472" alt="image" src="https://github.com/user-attachments/assets/73e9e556-c19e-4654-a51c-36986213a77f" />
 
+**TCP/IP layers** has four layers and is a more condensed version of the OSI model. 
+
+**Application Layer** this layer is where network applications and their protocols operate such as HTTP, TLS and DNS.
+
+**Transport Layer** this layer is where data transfer between devices happens and the protocols here are TCP and UDP
+
+**Internet Layer** is responsible for logical addressing and routing data across different networks, the primary protocol for this is IP which handles the delivery of your packets from the source to the destination across multiple networks.  
+
+**Network Access Layer** is a condensed version of the Layer 1 and 2 of the OSI model. This layer encompasses things like the physical and data line aspect e.g. Ethernet, Wirless and LAN.
+
+<img width="1444" height="882" alt="image" src="https://github.com/user-attachments/assets/82744956-f331-4767-81cb-56583c9778e6" />
+
+
+**What the OSI layer looks like for the Sender and Receiver**
+
+Sender
+---
+<img width="1795" height="913" alt="image" src="https://github.com/user-attachments/assets/a9a4f861-0a76-4e68-9c4d-71f230391b26" />
+
+Application Layer - a POST request is sent with som JSON data included to the HTTPS server 
+
+Presentation Layer - The JSON needs to be serialized meaning you're converting your data which comes in flat byte data string and is then transmitted over the network
+
+Session Layer - Where the establishment, maintenance and termination of connections is done - This case we request to establish TCP connection or TLS for secure comms via HTTPS
+
+Transport Layer - Responsible for delivery the data across the network - The device will send a SYN request (TCP handshake= SYN then SYN-ACK
+
+Receiver
+---
+<img width="1499" height="878" alt="image" src="https://github.com/user-attachments/assets/8ef6b6e3-6b25-4791-92fe-1bcab1282bff" />
+
