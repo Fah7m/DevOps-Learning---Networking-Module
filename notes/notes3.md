@@ -120,6 +120,8 @@ DNS Resolution Process
 > TLD server doesn't know the exact IP address of google.com but it knows which Auth name server to ask 
 > Resolver queries the auth name server for google.com and the IP address is returned to the DNS resolve which is finally sent back to you
 
+<img width="1813" height="982" alt="image" src="https://github.com/user-attachments/assets/6f320f09-3dfa-46f1-af2c-900bb370f644" />
+
 <img width="1683" height="892" alt="image" src="https://github.com/user-attachments/assets/9b624a37-4e33-42a1-8fb3-d4a9d51a40b2" />
 
 
@@ -130,3 +132,29 @@ DNS registrar - The entity allows you to purchase and register domains - They ha
 
 DNS hosting prov - This entity operates DNS name servers that host DNS zones - They allow you to manage these DNS records within these zones e.g. Route 53 hosting zone.
 
+
+**nslookup** is used to query DNS servers - it provides information about DNS records for that certain domain.
+
+```
+nslookup google.com
+```
+
+<img width="1174" height="579" alt="image" src="https://github.com/user-attachments/assets/189da4c7-f44a-4228-ac6d-af024c046734" />
+
+
+**dig** stands for Domain Information Grouper and it provides are much more detailed output for querying DNS servers.
+
+```
+dig google.com - gives the full output
+
+dig +short google.com - gives just IPs
+
+dig +short ns google.com - gives the name servers
+```
+<img width="713" height="418" alt="image" src="https://github.com/user-attachments/assets/7acbec8c-4725-43b4-8bc5-7219d73cd921" />
+
+
+/etc/hosts
+---
+
+A local file on your computer that maps omain names to IP addresses. It can also set a rule for domains to use a specific IP address so when doing a search it first looks in the /etc/host file.
