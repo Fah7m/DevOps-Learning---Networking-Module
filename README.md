@@ -65,7 +65,28 @@ echo "Hello from Amazon Linux 2023!" | sudo tee /usr/share/nginx/html/index.html
 
 4. **Create records and point them to your Web Server**
 
-First create the records and copy the Public IP of your EC2 Instance 
+First create the records and copy the Public IP of your EC2 Instance so when the sub domain is searched in the browser, it goes to the EC2 instance IP.
+
+<img width="1650" height="610" alt="image" src="https://github.com/user-attachments/assets/aa9efea6-3a9d-4e4a-8b28-e3964a980be3" />
+
+5. **Customise your homepage**
+
+By going into the usr/share/nginx/html/index.html file, you can edit your homepage to show what you want on it
+
+<img width="800" height="218" alt="image" src="https://github.com/user-attachments/assets/af9c0c5c-adf2-432d-a819-e83bd14e0978" />
+
+Once your done with editing and saving the index.html file, run the below command so the new version displays on your domain
+
+```
+sudo systemctl restart nginx
+```
+
+6. **Searching the domain on browser**
+
+Finally the easiest part which is searching your domain on the browser to see if it's worked.
+
+
+
 
 🔨Troubleshooting
 ---
